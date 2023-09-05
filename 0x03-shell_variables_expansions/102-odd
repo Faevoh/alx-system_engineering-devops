@@ -1,2 +1,2 @@
 #!/bin/bash
-grep --line-buffered -n '^' | grep -E '^[0-9]*[13579]:'
+grep --line-buffered -n '^' | grep -E '^[0-9]*[13579]:' | paste -d '-' - - | cut -d ':' -f 1,2
